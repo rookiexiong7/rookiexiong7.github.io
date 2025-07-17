@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SeC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="helper.js" defer></script>
+  <style>
+    td {
+      vertical-align: middle;
+      min-width: 220px;
+    }
+    audio {
+      height: 50px;
+      width: 20vw;
+      min-width: 70px;
+      max-width: 220px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style="padding-top: 3em; text-align: center; background-color: #f8f9fa; border-radius: 1em; padding: 3em; margin-top: 3em; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    <!-- Title -->
+    <h1 style="font-weight: bold; font-size: 2.5em;">
+      SeC: Advancing Complex Video Object Segmentation <br/> via Progressive Concept Construction
+    </h1>
+  
+    <!-- Author List -->
+    <div style="text-align: center; font-size: 1.3em; line-height: 2em; margin-top: 2em;">
+      <a href="https://github.com/rookiexiong7/">Zhixiong Zhang</a><sup>*</sup> ·
+      <a href="https://mark12ding.github.io/">Shuangrui Ding</a><sup>*</sup> ·
+      <a href="https://lightdxy.github.io/">Xiaoyi Dong</a><sup>✉</sup> ·
+      <a href="https://yuhangzang.github.io/">Yuhang Zang</a><br/>
+
+      <a href="https://scholar.google.com/citations?user=sJkqsqkAAAAJ">Yuhang Cao</a> ·
+      <a href="http://dahua.site/">Dahua Lin</a> ·
+      <a href="https://myownskyw7.github.io/">Jiaqi Wang</a><sup>✉</sup>
+    </div>
+
+    <!-- Institutions (可选) -->
+    <div style="font-size: 1.3em; margin-top: 0.5em;">
+      <sup>1</sup>SJTU &nbsp;
+      <sup>2</sup>CUHK &nbsp;
+      <sup>3</sup>Shanghai AI Lab &nbsp;
+    </div>
+    
+    <div style="margin-top: 2em;">
+      <a href="https://arxiv.org/abs/xxx" style="text-decoration: none; margin: 0 10px;">
+        <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&style=for-the-badge">
+      </a>
+      <a href="https://github.com/xxx/xxx" style="text-decoration: none; margin: 0 10px;">
+        <img src="https://img.shields.io/badge/Code-GitHub-2f2f2f?logo=github&style=for-the-badge">
+      </a>
+      <!-- <a href="https://huggingface.co/datasets/your-dataset-name" style="text-decoration: none; margin: 0 10px;">
+        <img src="https://img.shields.io/badge/Demo-HuggingFace-orange?logo=huggingface&style=for-the-badge">
+      </a> -->
+      <a href="https://huggingface.co/datasets/your-dataset-name" style="text-decoration: none; margin: 0 10px;">
+        <img src="https://img.shields.io/badge/Dataset-HuggingFace-orange?logo=huggingface&style=for-the-badge">
+      </a>
+    </div>
+
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <video controls controlslist="nodownload" style="width: 1200px; max-width: 100%;">
+        <source src="assets/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- Abstract Section -->
+  <div class="container" style="padding-top: 1.5em; text-align: center; background-color: #f8f9fa; border-radius: 1em; padding: 3em; margin-top: 3em; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    <h2 style="font-weight: 600; margin-bottom: 0.5em;">Abstract</h2>
+    <div style="font-size: 1.08em; line-height: 1.6em; text-align: justify; color: #333;">
+      Video Object Segmentation (VOS) is a core task in computer vision, requiring models to track and segment target objects across video frames. Despite notable advances with recent efforts, current techniques still lag behind human capabilities in handling drastic visual variations, occlusions, and complex scene changes. This limitation arises from their reliance on appearance matching, neglecting the human-like conceptual understanding of objects that enables robust identification across temporal dynamics.
+      
+      Motivated by this gap, we propose <b>Segment Concept (SeC)</b>, a concept-driven segmentation framework that shifts from conventional feature matching to the progressive construction and utilization of high-level, object-centric representations. SeC employs Large Vision-Language Models (LVLMs) to integrate visual cues across diverse frames, constructing robust conceptual priors. During inference, SeC forms a comprehensive semantic representation of the target based on processed frames, realizing robust segmentation of follow-up frames. 
+      
+      Furthermore, SeC adaptively balances LVLM-based semantic reasoning with enhanced feature matching, dynamically adjusting computational efforts based on scene complexity.
+      
+      To rigorously assess VOS methods in scenarios demanding high-level conceptual reasoning and robust semantic understanding, we introduce the <b>Semantic Complex Scenarios Video Object Segmentation</b> benchmark (<b>SeCVOS</b>). SeCVOS comprises 160 manually annotated multi-scenario videos designed to challenge models with substantial appearance variations and dynamic scene transformations. Empirical evaluations demonstrate that SeC substantially outperforms state-of-the-art approaches, including SAM 2 and its advanced variants, on both SeCVOS and standard VOS benchmarks. In particular, SeC achieves an <b>11.8-point improvement over SAM 2.1</b> on SeCVOS, establishing a new state-of-the-art in concept-aware video object segmentation.
+    </div>
+    <div>
+      <p><br /></p>
+      <p style="text-align: center;">
+        <img src="assets/teaser.pdf" width=100% class="img-fluid">
+      </p>
+    </div>
+  
+  </div>
+
+  <!-- Benchmark Section -->
+  <div class="container" style="padding-top: 1.5em; text-align: center; background-color: #f8f9fa; border-radius: 1em; padding: 3em; margin-top: 3em; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    <h2 style="font-weight: 600; margin-bottom: 0.5em;">SeCVOS</h2>
+    <div style="font-size: 1.08em; line-height: 1.6em; text-align: justify; color: #333;">
+      <!-- 你的描述内容可以放在这里 -->
+    </div>
+    
+    <!-- 视频区域 -->
+    <div style="
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1em;
+        margin-top: 2em;
+        justify-items: center;
+        align-items: start;
+    ">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/_1lwKMz9W50.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.97em; color: #555;"><em>The large grilled pork rib held by the short-haired woman in professional attire.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/_Z5NkURnkHg.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>A white soccer ball with a blue and purple pattern.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/0HgnueqXKyU.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>An orange Dodge Viper sports car.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/3qIRJLGGZy0.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>A grey cat in a police uniform and hat. && A tabby cat in a blue shirt and large gold chain.</em></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/bp6hhq8DdgU.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>A circular red, white, and blue shield with a star.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/ghayJozH0iA.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>A LEGO minifigure in a white helmet and a blue jacket holding a white sword.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/uWq8RebJeOc.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>A humanoid robot with red boxing gloves and headgear.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/W44PFMXuy_Q.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>The violin held by the female performer in a white long dress.</em></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/9-P4pMS6F2c.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>A dark grey Aston Martin sports car.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/aP2up9N6H-g.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>A red can of Pringles potato chips.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/AeP2Dwree4M.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>The drum in front of the boy.</em></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <video src="assets/secvos/wXXlIuD8Fo8.mp4" controls style="width: 100%; max-width: 300px; border-radius: 0.7em; box-shadow: 0 2px 10px rgba(0,0,0,0.06);"></video>
+        <div style="margin-top: 0.6em; font-size: 0.98em; color: #555;"><em>The small grey rabbit.</em></div>
+      </div>
+
+    </div>
+  </div>
+  
+
+  <!-- Results Section -->
+  <div class="container" style="padding-top: 1.5em; text-align: center; background-color: #f8f9fa; border-radius: 1em; padding: 3em; margin-top: 3em; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    <h2 style="font-weight: 600; margin-bottom: 0.5em;">Main Result</h2>
+    <p style="text-align: center;">
+      <img src="assets/result_secvos.png" width="90%" class="img-fluid">
+      <br>
+      <br>
+      <img src="assets/result_main.png" width="90%" class="img-fluid">
+    </p>
+  </div>
+
+
+  <div class="container" style="padding-top: 1.5em; text-align: center; background-color: #f8f9fa; border-radius: 1em; padding: 3em; margin-top: 3em; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <h2 style="font-weight: 600; margin-bottom: 1em; text-align: left;">BibTeX</h2>
+  
+    <pre style="background-color: #f0f0f0; padding: 1em 1em 0 1em; text-align: left; font-size: 0.95em; line-height: 1.6em; border-radius: 0.5em; overflow-x: auto; color: #333;">
+  @article{zhang2025sec,
+    title     = {SeC: Advancing Complex Video Object Segmentation via Progressive Concept Construction},
+    author    = {Zhixiong Zhang and Shuangrui Ding and Xiaoyi Dong and Yuhang Zang and Yuhang Cao and Dahua Lin and Jiaqi Wang},
+    journal   = {arXiv preprint arXiv:2507.0xxxx},
+    year      = {2025},
+    url       = {https://arxiv.org/abs/2507.0xxxx}
+  }
+    </pre>
+  </div>
+
+</body>
+
+</html>
