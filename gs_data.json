@@ -1,0 +1,93 @@
+{
+  "container_type": "Author",
+  "filled": [
+    "basics",
+    "publications",
+    "indices",
+    "counts"
+  ],
+  "scholar_id": "XBzscD0AAAAJ",
+  "source": "AUTHOR_PROFILE_PAGE",
+  "name": "Zhixiong Zhang",
+  "url_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=XBzscD0AAAAJ&citpid=1",
+  "affiliation": "Shanghai Jiao Tong University",
+  "organization": 11817969702535318711,
+  "interests": [
+    "Computer Vision",
+    "Multi-modal Learning"
+  ],
+  "email_domain": "@sjtu.edu.cn",
+  "citedby": 37,
+  "publications": {
+    "XBzscD0AAAAJ:u5HHmVD_uO8C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Gpt4scene: Understand 3d scenes from videos with vision-language models",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2501.01428, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:u5HHmVD_uO8C",
+      "num_citations": 26,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5591970578449671619",
+      "cites_id": [
+        "5591970578449671619"
+      ]
+    },
+    "XBzscD0AAAAJ:u-x6o8ySG0sC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Songgen: A single stage auto-regressive transformer for text-to-song generation",
+        "pub_year": "2025",
+        "citation": "ICML 2025, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:u-x6o8ySG0sC",
+      "num_citations": 8,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14899239961049231227",
+      "cites_id": [
+        "14899239961049231227"
+      ]
+    },
+    "XBzscD0AAAAJ:zYLM7Y9cAGgC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "VLN-R1: Vision-Language Navigation via Reinforcement Fine-Tuning",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2506.17221, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:zYLM7Y9cAGgC",
+      "num_citations": 3,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10243151668892418141",
+      "cites_id": [
+        "10243151668892418141"
+      ]
+    },
+    "XBzscD0AAAAJ:IjCSPb-OGe4C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "SeC: Advancing Complex Video Object Segmentation via Progressive Concept Construction",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2507.15852, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:IjCSPb-OGe4C",
+      "num_citations": 0
+    }
+  },
+  "citedby5y": 37,
+  "hindex": 3,
+  "hindex5y": 3,
+  "i10index": 1,
+  "i10index5y": 1,
+  "cites_per_year": {
+    "2024": 1,
+    "2025": 36
+  },
+  "updated": "2025-08-25 08:35:40"
+}
