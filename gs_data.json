@@ -1,0 +1,109 @@
+{
+  "container_type": "Author",
+  "filled": [
+    "basics",
+    "publications",
+    "indices",
+    "counts"
+  ],
+  "scholar_id": "XBzscD0AAAAJ",
+  "source": "AUTHOR_PROFILE_PAGE",
+  "name": "Zhixiong Zhang",
+  "url_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=XBzscD0AAAAJ&citpid=1",
+  "affiliation": "Shanghai Jiao Tong University",
+  "organization": 11817969702535318711,
+  "interests": [
+    "Computer Vision",
+    "Multi-modal Learning"
+  ],
+  "email_domain": "@sjtu.edu.cn",
+  "citedby": 85,
+  "publications": {
+    "XBzscD0AAAAJ:u5HHmVD_uO8C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Gpt4scene: Understand 3d scenes from videos with vision-language models",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2501.01428, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:u5HHmVD_uO8C",
+      "num_citations": 48,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5591970578449671619",
+      "cites_id": [
+        "5591970578449671619"
+      ]
+    },
+    "XBzscD0AAAAJ:Y0pCki6q_DkC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Songgen: A single stage auto-regressive transformer for text-to-song generation",
+        "pub_year": "2025",
+        "citation": "Forty-second International Conference on Machine Learning (ICML 2025), 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:Y0pCki6q_DkC",
+      "num_citations": 16,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14899239961049231227",
+      "cites_id": [
+        "14899239961049231227"
+      ]
+    },
+    "XBzscD0AAAAJ:zYLM7Y9cAGgC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "VLN-R1: Vision-Language Navigation via Reinforcement Fine-Tuning",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2506.17221, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:zYLM7Y9cAGgC",
+      "num_citations": 13,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10243151668892418141",
+      "cites_id": [
+        "10243151668892418141"
+      ]
+    },
+    "XBzscD0AAAAJ:IjCSPb-OGe4C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "SeC: Advancing Complex Video Object Segmentation via Progressive Concept Construction",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2507.15852, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:IjCSPb-OGe4C",
+      "num_citations": 8,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9478003377809661844",
+      "cites_id": [
+        "9478003377809661844"
+      ]
+    },
+    "XBzscD0AAAAJ:Tyk-4Ss8FVUC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "CODA: Coordinating the Cerebrum and Cerebellum for a Dual-Brain Computer Use Agent with Decoupled Reinforcement Learning",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2508.20096, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:Tyk-4Ss8FVUC",
+      "num_citations": 0
+    }
+  },
+  "citedby5y": 85,
+  "hindex": 4,
+  "hindex5y": 4,
+  "i10index": 3,
+  "i10index5y": 3,
+  "cites_per_year": {
+    "2024": 1,
+    "2025": 84
+  },
+  "updated": "2025-11-21 08:36:59"
+}
