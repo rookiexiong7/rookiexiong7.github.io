@@ -116,6 +116,16 @@ nav.top-nav {
   font-weight: 700;
   font-size: 18px;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 .nav-links {
@@ -152,7 +162,7 @@ main.page {
 }
 
 .layout {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 20px 16px 40px;
   display: flex;
@@ -476,6 +486,28 @@ table.pub-table tr:hover .thumb-cell img {
   color: #5c6773;
 }
 
+.badge-new {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-family: 'Lobster', cursive;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(255, 71, 87, 0.45);
+  animation: badge-pulse 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 /* Link Chips */
 .link-chip {
   display: inline-flex;
@@ -741,6 +773,7 @@ table.pub-table tr:hover .thumb-cell img {
 }
 
 .pub-table-compact td {
+  position: relative;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
