@@ -416,6 +416,7 @@ table.pub-table tr:hover .thumb-cell img {
 }
 
 .content-cell {
+  position: relative;
   padding: 18px 20px;
   width: 68%;
   vertical-align: middle;
@@ -725,6 +726,7 @@ table.pub-table tr:hover .thumb-cell img {
    Misc
    ======================== */
 .pub-note {
+  margin: 8px 0 0;
   font-size: 16px;
   color: var(--muted);
 }
@@ -736,6 +738,14 @@ table.pub-table tr:hover .thumb-cell img {
   border-left: 3px solid #22c55e;
   border-radius: 0 8px 8px 0;
   font-size: 17px;
+}
+
+.hobby-note {
+  margin: 0;
+  color: #44546a;
+  font-size: 17px;
+  font-style: italic;
+  text-align: center;
 }
 
 /* Venue + Title inline */
@@ -908,6 +918,12 @@ sup.mark-eq {
 
 sup.mark-corr {
   color: #b45309;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+sup.mark-lead {
+  color: #0f766e;
   font-weight: 700;
   font-size: 0.8em;
 }
