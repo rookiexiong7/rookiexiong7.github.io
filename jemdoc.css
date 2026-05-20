@@ -376,15 +376,15 @@ table.pub-table tr td:last-child {
 }
 
 .thumb-cell {
-  padding: 18px 20px;
-  width: 32%;
+  padding: 14px 18px;
+  width: 28%;
   vertical-align: middle;
 }
 
 .thumb-cell img {
   width: 100%;
   height: auto;
-  max-height: 280px;
+  max-height: 210px;
   object-fit: contain;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -417,22 +417,22 @@ table.pub-table tr:hover .thumb-cell img {
 
 .content-cell {
   position: relative;
-  padding: 18px 20px;
-  width: 68%;
+  padding: 16px 20px;
+  width: 72%;
   vertical-align: middle;
 }
 
 .papertitle {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 1.4;
 }
 
 .authors-line {
   color: var(--muted);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .text-red {
@@ -794,9 +794,9 @@ table.pub-table tr:hover .thumb-cell img {
 /* Experience card (Jinsong style) */
 .exp-card {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 22px 24px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -812,11 +812,13 @@ table.pub-table tr:hover .thumb-cell img {
 
 .exp-card-logo {
   flex-shrink: 0;
-  width: 200px;
+  width: 150px;
 }
 
 .exp-card-logo img {
   width: 100%;
+  max-height: 82px;
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -826,7 +828,7 @@ table.pub-table tr:hover .thumb-cell img {
 }
 
 .exp-card-org {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 2px;
@@ -836,7 +838,7 @@ table.pub-table tr:hover .thumb-cell img {
   font-size: 16px;
   color: var(--text);
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .at-symbol {
@@ -847,8 +849,8 @@ table.pub-table tr:hover .thumb-cell img {
 .exp-card-detail {
   font-size: 16px;
   color: var(--text);
-  line-height: 1.6;
-  margin-bottom: 2px;
+  line-height: 1.45;
+  margin-bottom: 0;
 }
 
 .exp-card-meta {
@@ -861,7 +863,7 @@ table.pub-table tr:hover .thumb-cell img {
 .exp-card-time {
   font-size: 15px;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .exp-card-time {
@@ -992,6 +994,15 @@ sup.mark-lead {
 
   .news-date {
     align-self: flex-start;
+  }
+
+  .exp-card {
+    flex-wrap: wrap;
+  }
+
+  .exp-card-meta {
+    width: 100%;
+    text-align: left;
   }
 }
 
