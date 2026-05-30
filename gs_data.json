@@ -1,0 +1,173 @@
+{
+  "container_type": "Author",
+  "filled": [
+    "basics",
+    "publications",
+    "indices",
+    "counts"
+  ],
+  "scholar_id": "XBzscD0AAAAJ",
+  "source": "AUTHOR_PROFILE_PAGE",
+  "name": "Zhixiong Zhang",
+  "url_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=XBzscD0AAAAJ&citpid=1",
+  "affiliation": "Shanghai Jiao Tong University",
+  "organization": 11817969702535318711,
+  "interests": [
+    "Computer Vision",
+    "Multi-modal Learning"
+  ],
+  "email_domain": "@sjtu.edu.cn",
+  "homepage": "https://rookiexiong7.github.io/",
+  "citedby": 222,
+  "publications": {
+    "XBzscD0AAAAJ:u5HHmVD_uO8C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Gpt4scene: Understand 3d scenes from videos with vision-language models",
+        "pub_year": "2025",
+        "citation": "The Fourteenth International Conference on Learning Representations (ICLR 2026), 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:u5HHmVD_uO8C",
+      "num_citations": 108,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5591970578449671619",
+      "cites_id": [
+        "5591970578449671619"
+      ]
+    },
+    "XBzscD0AAAAJ:zYLM7Y9cAGgC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Vln-r1: Vision-language navigation via reinforcement fine-tuning",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2506.17221, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:zYLM7Y9cAGgC",
+      "num_citations": 49,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10243151668892418141",
+      "cites_id": [
+        "10243151668892418141"
+      ]
+    },
+    "XBzscD0AAAAJ:Y0pCki6q_DkC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Songgen: A single stage auto-regressive transformer for text-to-song generation",
+        "pub_year": "2025",
+        "citation": "Forty-second International Conference on Machine Learning (ICML 2025), 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:Y0pCki6q_DkC",
+      "num_citations": 33,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14899239961049231227",
+      "cites_id": [
+        "14899239961049231227"
+      ]
+    },
+    "XBzscD0AAAAJ:IjCSPb-OGe4C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "SeC: Advancing Complex Video Object Segmentation via Progressive Concept Construction",
+        "pub_year": "2025",
+        "citation": "The Fourteenth International Conference on Learning Representations (ICLR 2026), 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:IjCSPb-OGe4C",
+      "num_citations": 15,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9478003377809661844",
+      "cites_id": [
+        "9478003377809661844"
+      ]
+    },
+    "XBzscD0AAAAJ:roLk4NBRz8UC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2605.10912, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:roLk4NBRz8UC",
+      "num_citations": 7,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5701559679980772221,17920634377215582542,18340473101711454154",
+      "cites_id": [
+        "5701559679980772221",
+        "17920634377215582542",
+        "18340473101711454154"
+      ]
+    },
+    "XBzscD0AAAAJ:eQOLeE2rZwMC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Deepgen 1.0: A lightweight unified multimodal model for advancing image generation and editing",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2602.12205, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:eQOLeE2rZwMC",
+      "num_citations": 6,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14628656010218719817",
+      "cites_id": [
+        "14628656010218719817"
+      ]
+    },
+    "XBzscD0AAAAJ:YsMSGLbcyi4C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "UniReason 1.0: A Unified Reasoning Framework for World Knowledge Aligned Image Generation and Editing",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2602.02437, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:YsMSGLbcyi4C",
+      "num_citations": 4,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14204893441211648937",
+      "cites_id": [
+        "14204893441211648937"
+      ]
+    },
+    "XBzscD0AAAAJ:Se3iqnhoufwC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "SetCon: Towards Open-Ended Referring Segmentation via Set-Level Concept Prediction",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2605.20110, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:Se3iqnhoufwC",
+      "num_citations": 0
+    },
+    "XBzscD0AAAAJ:Tyk-4Ss8FVUC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "CODA: Coordinating the Cerebrum and Cerebellum for a Dual-Brain Computer Use Agent with Decoupled Reinforcement Learning",
+        "pub_year": "2025",
+        "citation": "arXiv preprint arXiv:2508.20096, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "XBzscD0AAAAJ:Tyk-4Ss8FVUC",
+      "num_citations": 0
+    }
+  },
+  "citedby5y": 222,
+  "hindex": 6,
+  "hindex5y": 6,
+  "i10index": 4,
+  "i10index5y": 4,
+  "cites_per_year": {
+    "2024": 2,
+    "2025": 106,
+    "2026": 113
+  },
+  "updated": "2026-05-30 10:08:56"
+}
