@@ -33,7 +33,7 @@ body {
   background: var(--bg);
   line-height: 1.7;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body,
@@ -43,7 +43,7 @@ tr,
 p,
 a {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,7 +60,6 @@ p:last-child {
 
 strong {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
 }
 
 a {
@@ -207,7 +206,7 @@ main.page {
 .sidebar-line {
   margin: 0 0 4px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.5;
   max-width: 240px;
   margin-left: auto;
@@ -318,7 +317,7 @@ h2 {
   margin: 0 0 8px;
   font-weight: 700;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 0.2px;
   display: flex;
   align-items: baseline;
@@ -330,11 +329,26 @@ h3 {
   margin: 0 0 8px;
   font-weight: 700;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.2px;
   color: var(--text);
   padding-bottom: 8px;
   border-bottom: 1px dashed var(--border);
+}
+
+.publication-subsection .section-cell {
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+.publication-subsection h3 {
+  margin-bottom: 4px;
+  padding-bottom: 5px;
+}
+
+.publication-subsection + .pub-table,
+.publication-subsection + .pub-table-compact {
+  border-spacing: 0 6px;
 }
 
 /* ========================
@@ -344,7 +358,7 @@ table.pub-table {
   width: 100%;
   border: 0;
   border-collapse: separate;
-  border-spacing: 0 16px;
+  border-spacing: 0 9px;
   margin: 0 auto;
 }
 
@@ -376,21 +390,22 @@ table.pub-table tr td:last-child {
 }
 
 .thumb-cell {
-  padding: 14px 18px;
-  width: 28%;
+  padding: 8px 10px;
+  width: 20%;
   vertical-align: middle;
 }
 
 .thumb-cell img {
   width: 100%;
   height: auto;
-  max-height: 210px;
+  max-height: 180px;
   object-fit: contain;
   border-radius: 10px;
   border: 1px solid var(--border);
   box-shadow: 0 6px 16px rgba(16, 24, 40, 0.12);
   background: #fff;
   display: block;
+  margin: 0;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
@@ -417,21 +432,21 @@ table.pub-table tr:hover .thumb-cell img {
 
 .content-cell {
   position: relative;
-  padding: 16px 20px;
-  width: 72%;
+  padding: 12px 14px 12px 6px;
+  width: 80%;
   vertical-align: middle;
 }
 
 .papertitle {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.4;
 }
 
 .authors-line {
   color: var(--muted);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -443,10 +458,11 @@ table.pub-table tr:hover .thumb-cell img {
 /* Venue Badges */
 .venue {
   display: inline-block;
-  padding: 2px 10px;
-  margin: 0 8px 0 0;
+  padding: 2px 8px;
+  margin: 0 6px 0 0;
   border-radius: 999px;
-  font-size: 15px;
+  font-size: 12px;
+  line-height: 1.25;
   vertical-align: middle;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -489,12 +505,13 @@ table.pub-table tr:hover .thumb-cell img {
 
 .badge-new {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 4px 12px;
+  top: -8px;
+  right: -8px;
+  padding: 3px 9px;
   border-radius: 999px;
   font-family: 'Lobster', cursive;
   font-size: 15px;
+  line-height: 1.25;
   font-weight: 400;
   letter-spacing: 0.5px;
   background: linear-gradient(135deg, #ff4757, #ff6b81);
@@ -513,14 +530,14 @@ table.pub-table tr:hover .thumb-cell img {
 .link-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  margin: 4px 6px 4px 0;
+  gap: 4px;
+  padding: 2px 8px;
+  margin: 2px 4px 2px 0;
   border-radius: 999px;
   background: #ffffff;
   color: #1b3b6f;
   border: 1px solid var(--border);
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.2px;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
@@ -615,7 +632,7 @@ table.pub-table tr:hover .thumb-cell img {
   gap: 0;
   padding: 9px 0;
   border-bottom: 1px solid #f0f1f3;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -665,7 +682,7 @@ table.pub-table tr:hover .thumb-cell img {
   flex-shrink: 0;
   font-weight: 700;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
   padding-left: 16px;
   white-space: nowrap;
 }
@@ -675,7 +692,7 @@ table.pub-table tr:hover .thumb-cell img {
    ======================== */
 .gs-badge {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--link);
   margin-left: auto;
@@ -695,13 +712,14 @@ table.pub-table tr:hover .thumb-cell img {
 }
 
 .news-list li {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 17px;
   padding: 10px 0;
-  border-bottom: 1px solid #f0f1f3;
-  font-size: 18px;
-  line-height: 1.6;
-  display: flex;
+  border-bottom: 1px solid #edf0f4;
+  font-size: 16px;
+  line-height: 1.65;
   align-items: baseline;
-  gap: 12px;
 }
 
 .news-list li:last-child {
@@ -710,16 +728,17 @@ table.pub-table tr:hover .thumb-cell img {
 
 .news-date {
   display: inline-block;
-  min-width: 82px;
-  padding: 3px 12px;
-  background: #e7eefc;
-  color: #1455c0;
+  min-width: 89px;
+  padding: 3px 9px;
+  background: #eaf0ff;
+  color: #245ab5;
   font-size: 14px;
   font-weight: 700;
   border-radius: 999px;
+  line-height: 1.3;
   text-align: center;
   white-space: nowrap;
-  flex-shrink: 0;
+  justify-self: start;
 }
 
 /* ========================
@@ -727,7 +746,7 @@ table.pub-table tr:hover .thumb-cell img {
    ======================== */
 .pub-note {
   margin: 8px 0 0;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--muted);
 }
 
@@ -737,13 +756,13 @@ table.pub-table tr:hover .thumb-cell img {
   background: #f0fdf4;
   border-left: 3px solid #22c55e;
   border-radius: 0 8px 8px 0;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .hobby-note {
   margin: 0;
   color: #44546a;
-  font-size: 17px;
+  font-size: 16px;
   font-style: italic;
   text-align: center;
 }
@@ -768,7 +787,7 @@ table.pub-table tr:hover .thumb-cell img {
   width: 100%;
   border: 0;
   border-collapse: separate;
-  border-spacing: 0 14px;
+  border-spacing: 0 8px;
   margin: 0 auto;
 }
 
@@ -787,7 +806,7 @@ table.pub-table tr:hover .thumb-cell img {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 18px 24px;
+  padding: 10px 14px;
   vertical-align: middle;
 }
 
@@ -934,13 +953,48 @@ sup.mark-lead {
    News Text
    ======================== */
 .news-text {
-  flex: 1;
+  min-width: 0;
+  line-height: 1.65;
   word-spacing: normal;
   letter-spacing: normal;
 }
 
+.news-text strong {
+  font-size: inherit;
+}
+
 .news-text a {
   word-spacing: normal;
+}
+
+.news-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  color: var(--link);
+  font: 500 13px/1.6 Georgia, 'Times New Roman', serif;
+  cursor: pointer;
+}
+
+.news-toggle:hover {
+  color: var(--link-hover);
+}
+
+.news-toggle span {
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+
+.news-toggle[aria-expanded="true"] span {
+  transform: rotate(180deg);
+}
+
+.news-list + .news-toggle {
+  margin-top: 8px;
 }
 
 /* ========================
@@ -987,15 +1041,6 @@ sup.mark-lead {
     border-top-right-radius: 0;
   }
 
-  .news-list li {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .news-date {
-    align-self: flex-start;
-  }
-
   .exp-card {
     flex-wrap: wrap;
   }
@@ -1007,6 +1052,15 @@ sup.mark-lead {
 }
 
 @media (max-width: 600px) {
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a {
+    font-size: 15px;
+  }
+
   .nav-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -1020,8 +1074,59 @@ sup.mark-lead {
     font-size: 22px;
   }
 
-  .papertitle {
+  h3 {
     font-size: 17px;
+  }
+
+  .news-list li {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .news-date {
+    min-width: 78px;
+    padding: 3px 7px;
+    font-size: 12px;
+  }
+
+  .news-toggle {
+    font-size: 12px;
+  }
+
+  .papertitle {
+    font-size: 15px;
+  }
+
+  .authors-line {
+    font-size: 13px;
+  }
+
+  .venue,
+  .link-chip {
+    font-size: 11px;
+  }
+
+  .pub-note {
+    font-size: 13px;
+  }
+
+  .collab-note,
+  .hobby-note {
+    font-size: 15px;
+  }
+
+  .awards-list li {
+    font-size: 15px;
+  }
+
+  .award-year {
+    font-size: 13px;
+  }
+
+  .sidebar-line {
+    font-size: 14px;
   }
 
   .sidebar-name {
