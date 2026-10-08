@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or 'Blog' }} · {{ site.name }}</title>
+  <meta name="description" content="{{ summary or '论文解读、研究笔记，以及一路上的所思所想。' }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ title or 'Blog' }} · {{ site.name }}">
+  <meta property="og:description" content="{{ summary or '论文解读、研究笔记，以及一路上的所思所想。' }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{{ 'article' if layout == 'post.njk' else 'website' }}">
+  <link rel="icon" href="/data/logos/logo.png">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} · Blog" href="/blog/feed.xml">
+  <link rel="stylesheet" href="/jemdoc.css">
+  <link rel="stylesheet" href="/blog/assets/blog.css">
+  {% if layout == 'post.njk' %}<link rel="stylesheet" href="/blog/assets/katex/katex.min.css">{% endif %}
+</head>
+<body id="top" class="blog-page">
+  <a class="skip-link" href="#content">跳到正文</a>
+  {{ homepageChrome.navigation | safe }}
+  <main id="content" class="blog-content">
+    {{ content | safe }}
+    <footer class="blog-footer">
+      <a href="/">← Back to homepage</a>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </main>
+</body>
+</html>

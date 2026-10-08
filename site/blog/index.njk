@@ -1,0 +1,44 @@
+---
+layout: base.njk
+pagination:
+  data: collections.archives
+  size: 1
+  alias: archive
+permalink: "{{ archive.url }}"
+eleventyComputed:
+  title: "{{ archive.topic.labelEn }} · Blog"
+---
+<header class="blog-heading">
+  <h1>Zhixiong's Blog</h1>
+  <p class="blog-intro">Reading notes, research ideas, and things learned along the way.</p>
+</header>
+<section class="archive" data-archive data-category="{{ archive.topic.id }}" aria-label="文章列表">
+  <div class="archive-toolbar">
+    <nav class="category-nav" aria-label="文章分类">
+      <a href="/blog/"{% if not archive.topic.id %} aria-current="page"{% endif %}>全部 <span>{{ collections.posts.length }}</span></a>
+      {% for topic in categories %}<a href="/blog/category/{{ topic.id }}/"{% if archive.topic.id == topic.id %} aria-current="page"{% endif %}>{{ topic.label }} <span>{{ collections.posts | categoryCount(topic.id) }}</span></a>{% endfor %}
+    </nav>
+    <form class="search-form" role="search" hidden>
+      <label for="blog-search" class="sr-only">搜索标题、摘要或标签</label>
+      <span class="search-icon" aria-hidden="true">⌕</span><input id="blog-search" name="q" type="search" placeholder="搜索文章…" autocomplete="off">
+    </form>
+  </div>
+  <div class="archive-caption"><span>{{ archive.topic.description or '我与我周旋久，宁作我' }}</span><span>{{ archive.count }} 篇文章</span></div>
+  <div data-default-results>
+    {% for post in archive.posts %}{% include 'post-card.njk' %}{% else %}
+    <div class="empty-state">
+      <h2>下一篇笔记，正在准备中。</h2>
+      <p>这里将记录论文解读、研究笔记和日常思考。</p>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="search-status" role="status" aria-live="polite" hidden></p>
+  <div data-search-results hidden></div>
+  <button class="load-more" type="button" hidden>加载更多结果 ↓</button>
+  <nav class="pagination" aria-label="文章分页"{% if archive.totalPages < 2 %} hidden{% endif %}>
+    {% if archive.previous %}<a href="{{ archive.previous }}">← 较新的文章</a>{% else %}<span></span>{% endif %}
+    <span>{{ archive.page }} / {{ archive.totalPages }}</span>
+    {% if archive.next %}<a href="{{ archive.next }}">较早的文章 →</a>{% else %}<span></span>{% endif %}
+  </nav>
+</section>
+<script src="/blog/assets/search.js" defer></script>

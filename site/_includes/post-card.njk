@@ -1,0 +1,9 @@
+<article class="post-card">
+  <div class="post-card-main">
+    <div class="post-meta"><time datetime="{{ post.date | dateISO }}">{{ post.date | dateDisplay }}</time><span aria-hidden="true">/</span><a href="/blog/category/{{ post.data.category }}/">{{ post.data.category | categoryLabel }}</a></div>
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p class="post-summary">{{ post.data.summary }}</p>
+    {% if post.data.tags.length %}<ul class="post-tags" aria-label="标签">{% for tag in post.data.tags %}<li>{{ tag }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+  {% if post.data.cover %}<img class="post-cover" src="{{ post.data.cover }}" alt="" width="160" height="112" loading="lazy" decoding="async">{% else %}<span class="post-arrow" aria-hidden="true">↗</span>{% endif %}
+</article>

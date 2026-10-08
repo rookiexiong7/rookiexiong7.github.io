@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+<article class="post-detail">
+  <a class="back-link" href="/blog/">← 全部文章</a>
+  <header class="post-header">
+    <div class="post-meta"><time datetime="{{ date | dateISO }}">{{ date | dateDisplay }}</time><span aria-hidden="true">/</span><a href="/blog/category/{{ category }}/">{{ category | categoryLabel }}</a></div>
+    <h1>{{ title }}</h1>
+    <p class="post-deck">{{ summary }}</p>
+    {% if tags.length %}<ul class="post-tags" aria-label="标签">{% for tag in tags %}<li>{{ tag }}</li>{% endfor %}</ul>{% endif %}
+  </header>
+  <div class="post-body">{{ content | safe }}</div>
+  <div class="post-end"><span>— END —</span><a href="/blog/">继续阅读其他文章 →</a></div>
+</article>

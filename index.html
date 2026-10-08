@@ -29,6 +29,7 @@
         <a href="#publications-section">Publications</a>
         <a href="#experience-section">Experience</a>
         <a href="#awards-section">Awards</a>
+        <a href="/blog/">Blog</a>
       </div>
     </div>
   </nav>
@@ -353,7 +354,7 @@
   <!-- Nav Scroll Spy -->
   <script>
   (() => {
-    const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
     const sections = navLinks.map(link => {
       const id = (link.getAttribute('href') || '').slice(1);
       return { link, section: document.getElementById(id) };

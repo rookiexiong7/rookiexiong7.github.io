@@ -1,0 +1,25 @@
+{
+  "name": "zhixiong-homepage",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/check-blog.cjs && eleventy",
+    "dev": "node scripts/check-blog.cjs && eleventy --serve",
+    "check": "node scripts/check-blog.cjs",
+    "test": "node --test tests/blog.test.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "@vscode/markdown-it-katex": "1.1.2",
+    "katex": "0.19.0",
+    "markdown-it": "15.0.2",
+    "markdown-it-anchor": "9.2.0"
+  },
+  "overrides": {
+    "@vscode/markdown-it-katex": {
+      "katex": "$katex"
+    }
+  }
+}

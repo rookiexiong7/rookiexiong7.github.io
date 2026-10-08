@@ -4,3 +4,10 @@ __pycache__
 */.DS_Store
 *.pptx
 index-jinsong.html
+
+# Blog: sources only; build output and local dependencies stay out of Git.
+node_modules/
+_site/
+.cache/
+# Keep original papers, videos, and other large references locally here.
+blog-local/
