@@ -1,6 +1,7 @@
 ---
 title: "Show-Harness：用语义动作接口让 VLM 操作机器人"
 date: "2026-10-08"
+paperDate: "2026-09-09"
 category: papers
 summary: "VLM 理解了任务，为什么仍难以稳定控制机器人？Show-Harness 将移动、旋转与抓放组织成可解释的动作单元，再由本体适配的解释器落实为运动。本文拆解这一接口、零样本与小模型微调两种模式，以及真实机器人实验对泛化、精度和响应速度的启示。"
 tags: [Embodied AI, Robot Manipulation, Vision-Language Models, Action Interface, Agent Harness]

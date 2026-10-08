@@ -1,6 +1,7 @@
 ---
 title: "HarnessDev：模型能否创建并持续改进自己的执行框架？"
 date: "2026-10-08"
+paperDate: "2026-09-01"
 category: papers
 summary: "Agent 的能力有多少来自模型，又有多少来自执行框架？HarnessDev 把可运行、可复用的框架本身作为评测对象，分别检验从弱起点创建系统和根据执行反馈持续改进的能力。本文拆解创建者与执行者的分工、跨模型迁移，以及反馈集上的收益为何未必能保留到新任务。"
 tags: [AI Agents, Agent Harness, Self-Improvement, Benchmark, Generalization]

@@ -1,6 +1,7 @@
 ---
 title: "Self-Evolving Coding Agents：让物理执行经验回流为代码、工具与模型能力"
 date: "2026-10-08"
+paperDate: "2026-09-28"
 category: papers
 summary: "机器人执行结束后，留下的应该不只是动作轨迹。Self-Evolving Coding Agents 提出 Physical Coding，以世界程序维护状态与约束，以策略程序组织执行、验证和恢复，并用 HexaAnything 将通过验证的经验转化为工具修订与模型训练数据。本文分别分析执行框架、模型和工具的实验收益，以及当前自我进化证据的范围。"
 tags: [Embodied AI, Coding Agents, Agent Harness, Self-Improvement, Robot Learning]

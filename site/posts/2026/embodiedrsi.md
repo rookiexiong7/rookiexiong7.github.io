@@ -1,6 +1,7 @@
 ---
 title: "EmbodiedRSI：让机器人执行框架自主选择实验、共同改进代码与技能"
 date: "2026-10-08"
+paperDate: "2026-10-07"
 category: papers
 summary: "机器人每试一次，都应该让下一次改进更有依据。EmbodiedRSI 在冻结机器人基础模型的条件下，用假设图组织代码与技能的修改方向，按信息增益与成本选择实验，再通过强化学习保留有助于后续改进的记忆。本文拆解这套闭环，并分析仿真泛化、真机迁移和有限交互预算下的实验结果。"
 tags: [Embodied AI, Agent Harness, Self-Improvement, Active Learning, Robot Learning]

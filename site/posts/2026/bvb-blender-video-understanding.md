@@ -1,6 +1,7 @@
 ---
 title: "BVB：用 Blender 视频重建检验 Agent 的时空理解"
 date: "2026-10-07"
+paperDate: "2026-09-26"
 category: papers
 summary: "如果 Agent 理解了一段视频，能否将它重建为可编辑的三维场景？拆解 BVB 的任务设计、Dual VQA 与 Latent Similarity，分析重建外观与事实保留之间的差距，以及推理预算应如何分配。"
 tags: [Video Understanding, 3D Reconstruction, Blender, Benchmark, Multimodal Agents]

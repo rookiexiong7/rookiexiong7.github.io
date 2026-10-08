@@ -1,6 +1,7 @@
 ---
 title: "论文标题：一句话说明你关心的问题"
 date: "2026-10-07"
+# paperDate: "2026-09-28" # 本文所引用论文版本的发布日期
 category: papers
 summary: "用两三句话描述论文解决的问题、主要思路，以及这篇笔记会讨论什么。"
 tags: [Vision-Language Models, Segmentation]
