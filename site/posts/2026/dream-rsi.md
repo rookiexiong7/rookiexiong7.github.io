@@ -4,7 +4,8 @@ date: "2026-10-07"
 paperDate: "2026-10-06"
 category: papers
 summary: "改进探索策略本身，为什么也需要昂贵的探索？Dream-RSI 将历史搜索树变成可回放环境，用低成本反馈改写探索策略，再投入下一轮真实搜索。本文拆解这一闭环的机制、质量与成本目标，以及历史回放的能力边界。"
-tags: [Recursive Self-Improvement, AI Agents, Program Search, Exploration, Agent Harness]
+tags: ["Agents & Self-Improvement"]
+keywords: ["Recursive Self-Improvement", "AI Agents", "Program Search", "Exploration", "Agent Harness"]
 draft: false
 paper: https://arxiv.org/abs/2609.14858v2
 cover: /blog/assets/dream-rsi/overview.webp

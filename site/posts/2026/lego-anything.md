@@ -4,7 +4,8 @@ date: "2026-10-08"
 paperDate: "2026-09-28"
 category: papers
 summary: "如果编程 Agent 理解了一张图像，能否把它写成可查询的三维场景？LEGO-Anything 将单图重建变成 Blender 程序构建，用几何与外观指标诊断迭代失败，再通过初始化、工具反馈和版本控制改善结果。本文分析这种表示的价值，以及它距离可靠的检测、分割和深度预测还有多远。"
-tags: [3D Reconstruction, Spatial Intelligence, Blender, Multimodal Agents, Visual Grounding]
+tags: ["Vision & Spatial Understanding"]
+keywords: ["3D Reconstruction", "Spatial Intelligence", "Blender", "Multimodal Agents", "Visual Grounding"]
 draft: false
 paper: https://arxiv.org/abs/2609.36380v1
 cover: /blog/assets/lego-anything/overview.webp

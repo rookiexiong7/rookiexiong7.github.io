@@ -4,7 +4,8 @@ date: "2026-10-08"
 paperDate: "2026-08-27"
 category: papers
 summary: "视频里发生了什么，与它为什么这样运动，是不同的问题。Code as Worlds 用代码分开表达世界构成、动态演化和视觉外观，通过执行与证据核对迭代世界假设，再从保留的世界中生成可量化的训练监督。本文分析这套发现流程、QuantiPhy 上的收益，以及轨迹拟合、物理机制和模型能力之间的边界。"
-tags: [World Models, Physical Reasoning, Executable Representation, Multimodal Agents, Synthetic Data]
+tags: ["World Models"]
+keywords: ["World Models", "Physical Reasoning", "Executable Representation", "Multimodal Agents", "Synthetic Data"]
 draft: false
 paper: https://arxiv.org/abs/2608.27549v1
 cover: /blog/assets/code-as-worlds/discovery.webp

@@ -183,11 +183,13 @@ main.page {
   border-radius: 16px;
   padding: 20px 18px;
   box-shadow: 0 10px 28px rgba(16, 24, 40, 0.12);
-  text-align: center;
+  text-align: left;
 }
 
 .sidebar .avatar,
 .sidebar-card .avatar {
+  display: block;
+  margin: 0 auto;
   width: 95%;
   max-width: 300px;
   object-fit: cover;
@@ -209,9 +211,6 @@ main.page {
   font-size: 16px;
   line-height: 1.5;
   max-width: 240px;
-  margin-left: auto;
-  margin-right: auto;
-  text-wrap: balance;
 }
 
 .sidebar-line.level-primary {
@@ -227,7 +226,7 @@ main.page {
 .sidebar-links {
   margin: 14px 0 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
   flex-wrap: nowrap;
@@ -688,18 +687,37 @@ table.pub-table tr:hover .thumb-cell img {
 }
 
 /* ========================
-   Google Scholar Link
+   Section Action Links
    ======================== */
-.gs-badge {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 12px;
-  font-weight: 600;
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
   color: var(--link);
+  font: 600 13px/1.6 Georgia, 'Times New Roman', serif;
+  letter-spacing: normal;
+  cursor: pointer;
+}
+
+.section-link:hover,
+.section-link:focus-visible {
+  color: var(--link-hover);
+}
+
+.section-link span[aria-hidden] {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.section-link-right {
   margin-left: auto;
 }
 
-.gs-badge:hover {
-  color: var(--link-hover);
+.scholar-link {
+  font-weight: 400;
 }
 
 /* ========================
@@ -968,33 +986,8 @@ sup.mark-lead {
 }
 
 .news-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 10px;
-  padding: 2px 0;
-  border: 0;
-  background: transparent;
-  color: var(--link);
-  font: 500 13px/1.6 Georgia, 'Times New Roman', serif;
-  cursor: pointer;
-}
-
-.news-toggle:hover {
-  color: var(--link-hover);
-}
-
-.news-toggle span {
-  display: inline-block;
-  transition: transform 160ms ease;
-}
-
-.news-toggle[aria-expanded="true"] span {
-  transform: rotate(180deg);
-}
-
-.news-list + .news-toggle {
   margin-top: 8px;
+  font-weight: 400;
 }
 
 /* ========================
@@ -1091,7 +1084,7 @@ sup.mark-lead {
     font-size: 12px;
   }
 
-  .news-toggle {
+  .section-link {
     font-size: 12px;
   }
 

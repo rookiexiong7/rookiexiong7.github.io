@@ -1,4 +1,5 @@
 const fs = require('node:fs');
+const { createHash } = require('node:crypto');
 const markdownIt = require('markdown-it');
 const blog = require('./lib/blog.cjs');
 
@@ -23,6 +24,9 @@ module.exports = function (config) {
   config.addFilter('dateDisplay', value => blog.isoDate(value).replaceAll('-', '.'));
   config.addFilter('categoryLabel', id => blog.category(id)?.label || id);
   config.addFilter('categoryCount', (posts, id) => posts.filter(post => post.data.category === id).length);
+  config.addFilter('featuredCount', posts => posts.filter(post => post.data.featured === true).length);
+  config.addFilter('urlEncode', value => encodeURIComponent(value));
+  config.addFilter('assetVersion', file => createHash('sha256').update(fs.readFileSync(file)).digest('hex').slice(0,10));
   config.addPassthroughCopy({ 'index.html': 'index.html', 'jemdoc.css': 'jemdoc.css', 'data': 'data', 'projects': 'projects', 'static': 'static' });
   config.addPassthroughCopy({ 'site/assets': 'blog/assets' });
   config.addPassthroughCopy({ 'node_modules/katex/dist/katex.min.css': 'blog/assets/katex/katex.min.css', 'node_modules/katex/dist/fonts': 'blog/assets/katex/fonts' });

@@ -30,7 +30,8 @@ title: "SeC：从概念构建到视频分割"
 date: "2026-10-07"
 category: papers
 summary: "用一两句话介绍这篇笔记讨论的问题。"
-tags: [Segmentation, Vision-Language Models]
+tags: ["Vision & Spatial Understanding"]
+keywords: [Segmentation, Vision-Language Models]
 draft: true
 paper: https://arxiv.org/abs/2507.15852
 # cover: /blog/assets/reading-sec/cover.webp
@@ -38,12 +39,16 @@ paper: https://arxiv.org/abs/2507.15852
 ```
 
 - `category` 使用 `papers`（论文解读）、`research`（研究笔记）或 `notes`（随记）。
-- `date` 是加入博客的日期；论文另填 `paperDate: "2026-09-28"`，记录本文所引用版本的发布日期。列表先按加入日期倒序，同一天再按论文发布日期倒序；未填写论文日期的排在当天已填写的文章之后，日期相同则按文件名排序。总列表、分类、搜索和 RSS 共用这一顺序。
+- `tags` 从“Embodied AI”“Agents & Self-Improvement”“World Models”“Vision & Spatial Understanding”“Image & Video Generation”中选择 1–2 个主要主题，不再将模型、工具、细分任务和同义术语作为标签。`keywords` 存放 VLA、Blender 等细分术语，只参与关键词搜索，不显示为标签或筛选项。新增文章沿用这五类，用户明确要求扩展时再增加。
+- 首页 `/blog/` 是“精选”，只展示显式设置 `featured: true` 的已发布文章，目前仅 Astra 一篇。其他文章在各自栏目中正常展示；以后加入精选时，在文章元数据中设置该字段。
+- `date` 是加入博客的日期；论文另填 `paperDate: "2026-09-28"`，记录本文所引用版本的发布日期。列表先按加入日期倒序，同一天再按论文发布日期倒序；未填写论文日期的排在当天已填写的文章之后，日期相同则按文件名排序。精选、分类、搜索和 RSS 默认共用这一顺序。
 - 完成正文后改为 `draft: false`。草稿和未来日期不会生成文章页面，也不会进入列表、分类、搜索或 RSS。日期按 UTC 判断；未来文章需要到日期后再次运行构建才会发布。
 - 不要将秘密或私人材料提交到公开仓库；草稿只是不发布网页，Git 中的源码仍可见。
 - 支持 Markdown 表格、代码块、标题锚点和 `$...$` / `$$...$$` 公式；公式在构建时渲染。正文中的原始 HTML 默认禁用。
-- 首页仅在导航中提供 Blog 入口；总列表和分类每页 10 篇。搜索按需加载标题、摘要和标签，正文不打包进搜索索引。RSS 保留最新 20 篇。
+- 主页仅在导航中提供 Blog 入口；精选和分类每页 10 篇。栏目支持按加入博客日期的开始／结束范围、标签及关键词组合筛选，并可按日期切换升序或降序。标签可点击，筛选条件保存在 URL 中，便于分享；清除后恢复当前栏目默认列表。关键词匹配标题、摘要、标签及 `keywords`，正文不打包进搜索索引。精选中的搜索只匹配精选文章。RSS 保留所有栏目最新 20 篇。
 - 论文笔记存放在 `site/posts/2026/`；写作模板默认是草稿，不会进入文章列表。
+- 每篇博文独立成篇，正文不引用或链接本站其他博文，所需背景在本篇说明。
+- `References` 只列实际引用的论文；不额外列论文全文与图表、项目或模型主页、代码仓库、数据集主页等资源入口。原论文配图来源保留在图注中。长期写作偏好记录在根目录 `AGENTS.md`，写作时一并遵守。
 
 ## 控制仓库体积
 

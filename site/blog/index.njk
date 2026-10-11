@@ -12,17 +12,25 @@ eleventyComputed:
   <h1>Zhixiong's Blog</h1>
   <p class="blog-intro">Reading notes, research ideas, and things learned along the way.</p>
 </header>
-<section class="archive" data-archive data-category="{{ archive.topic.id }}" aria-label="文章列表">
+<section class="archive" data-archive data-category="{{ '' if archive.topic.id == 'featured' else archive.topic.id }}" data-featured="{{ 'true' if archive.topic.id == 'featured' else 'false' }}" aria-label="文章列表">
   <div class="archive-toolbar">
     <nav class="category-nav" aria-label="文章分类">
-      <a href="/blog/"{% if not archive.topic.id %} aria-current="page"{% endif %}>全部 <span>{{ collections.posts.length }}</span></a>
+      <a href="/blog/"{% if archive.topic.id == 'featured' %} aria-current="page"{% endif %}>精选 <span>{{ collections.posts | featuredCount }}</span></a>
       {% for topic in categories %}<a href="/blog/category/{{ topic.id }}/"{% if archive.topic.id == topic.id %} aria-current="page"{% endif %}>{{ topic.label }} <span>{{ collections.posts | categoryCount(topic.id) }}</span></a>{% endfor %}
     </nav>
     <form class="search-form" role="search" hidden>
-      <label for="blog-search" class="sr-only">搜索标题、摘要或标签</label>
-      <span class="search-icon" aria-hidden="true">⌕</span><input id="blog-search" name="q" type="search" placeholder="搜索文章…" autocomplete="off">
+      <label for="blog-search" class="sr-only">搜索标题、摘要或关键词</label>
+      <span class="search-icon" aria-hidden="true">⌕</span><input id="blog-search" name="q" type="search" placeholder="关键词…" autocomplete="off">
     </form>
   </div>
+  {% if archive.topic.id != 'featured' %}
+  <form class="archive-filters" aria-label="筛选文章" hidden>
+    <div class="date-filter"><span>日期</span><label class="sr-only" for="filter-from">开始日期</label><input id="filter-from" name="from" type="date"><span aria-hidden="true">—</span><label class="sr-only" for="filter-to">结束日期</label><input id="filter-to" name="to" type="date"></div>
+    <label class="filter-field" for="filter-tag"><span>标签</span><select id="filter-tag" name="tag"><option value="">所有标签</option>{% for tag in archive.tags %}<option value="{{ tag }}">{{ tag }}</option>{% endfor %}</select></label>
+    <label class="filter-field" for="filter-order"><span>排序</span><select id="filter-order" name="order"><option value="newest">日期从新到旧</option><option value="oldest">日期从旧到新</option></select></label>
+    <button class="reset-filters" type="button">清除筛选</button>
+  </form>
+  {% endif %}
   <div class="archive-caption"><span>{{ archive.topic.description or '我与我周旋久，宁作我' }}</span><span>{{ archive.count }} 篇文章</span></div>
   <div data-default-results>
     {% for post in archive.posts %}{% include 'post-card.njk' %}{% else %}
@@ -41,4 +49,5 @@ eleventyComputed:
     {% if archive.next %}<a href="{{ archive.next }}">较早的文章 →</a>{% else %}<span></span>{% endif %}
   </nav>
 </section>
-<script src="/blog/assets/search.js" defer></script>
+<script src="/blog/assets/archive-filters.js?v={{ 'site/assets/archive-filters.js' | assetVersion }}" defer></script>
+<script src="/blog/assets/search.js?v={{ 'site/assets/search.js' | assetVersion }}" defer></script>

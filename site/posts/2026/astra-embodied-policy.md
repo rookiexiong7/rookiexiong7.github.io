@@ -3,8 +3,10 @@ title: "GPT 6 Astra as an Embodied Policy：推理与动作先验如何协作"
 date: "2026-10-07"
 category: papers
 summary: "通用多模态模型能否直接成为机器人策略？从闭环控制方式、动作先验与任务适配出发，解读 Astra 与 π0.5 在 RoboDojo、RoboLab 上不同的表现，以及混合控制距离实时执行还有多远。"
-tags: [Embodied AI, VLA, Robot Manipulation, Hybrid Control, Multimodal Agents]
+tags: ["Embodied AI"]
+keywords: ["Embodied AI", "VLA", "Robot Manipulation", "Hybrid Control", "Multimodal Agents"]
 draft: false
+featured: true
 paper: https://anonymous-report-421.github.io/public-website/index.html?lang=en&view=1
 cover: /blog/assets/astra-embodied-policy/robodojo-score.webp
 ---
